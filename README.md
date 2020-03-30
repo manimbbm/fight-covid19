@@ -1,4 +1,4 @@
-# fight-covid19
+# Fight COVID19
 https://covid-global-hackathon.devpost.com/  
 
 ## Resources 
