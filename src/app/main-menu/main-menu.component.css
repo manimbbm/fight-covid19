@@ -1,0 +1,7 @@
+.navbar-nav mat-icon {
+  font-size: 22px;
+}
+
+.navbar-nav mat-icon.account-circle {
+  font-size: 40px;
+}

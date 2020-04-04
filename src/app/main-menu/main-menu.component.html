@@ -1,18 +1,28 @@
-
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-  <mat-icon>more_vert</mat-icon>
-</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span>Redial</span>
-  </button>
-  <button mat-menu-item disabled>
-    <mat-icon>voicemail</mat-icon>
-    <span>Check voice mail</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
-    <span>Disable alerts</span>
-  </button>
-</mat-menu>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto d-flex align-items-center">
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/have-fun">
+        <mat-icon>videogame_asset</mat-icon>
+        <span>Have Fun</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/danger">
+        <mat-icon><fa-icon [icon]="faSkull"></fa-icon></mat-icon>
+        <span>Danger!</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/settings">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </a>
+    </li>
+    <li class="nav-item active d-flex">
+      <a class="nav-link" routerLink="/profile">
+        <mat-icon class="account-circle">account_circle</mat-icon>
+        <span class="sr-only">(current)</span>
+      </a>
+    </li>
+  </ul>
+</div>
