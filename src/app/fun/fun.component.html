@@ -1,1 +1,8 @@
-<p>fun works!</p>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div *ngFor="let task of tasks" class="col-md-3 m-2 p-0">
+      <mat-card>{{task.task}}</mat-card>
+    </div>
+
+  </div>
+</div>
