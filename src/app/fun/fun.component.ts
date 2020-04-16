@@ -7,72 +7,79 @@ import {MatCardModule} from '@angular/material/card';
   styleUrls: ['./fun.component.css']
 })
 export class FunComponent implements OnInit {
-  tasks = [
-    {
-      task: 'Cook',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'Read',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'Watch',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'Build',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'Play Games',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'Play Instruments',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'Share posts',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'task2',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'task2',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'task2',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'task2',
-      skill: 2,
-      affection: 5
-    },
-    {
-      task: 'task2',
-      skill: 2,
-      affection: 5
-    },
-  ];
+  tasks: Array<object>;
 
-  constructor() { }
+  constructor() {
+    this.tasks = [
+      {
+        name: 'Cook',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'Read',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'Watch',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'Build',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'Play Games',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'Play Instruments',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'Share posts',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'task2',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'task2',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'task2',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'task2',
+        skill: 2,
+        affection: 5
+      },
+      {
+        name: 'task2',
+        skill: 2,
+        affection: 5
+      },
+    ];
+  }
 
   ngOnInit() {
+  }
+
+  favorite($event: MouseEvent, task) {
+    console.log({$event, task});
+    this.tasks.task = 'test';
   }
 
 }

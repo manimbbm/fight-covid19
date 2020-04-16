@@ -1,7 +1,13 @@
 <div class="container">
   <div class="row justify-content-md-center">
     <div *ngFor="let task of tasks" class="col-md-3 m-2 p-0">
-      <mat-card>{{task.task}}</mat-card>
+      <mat-card>
+        <mat-card-title>{{task.name}}</mat-card-title>
+        <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</mat-card-content>
+        <mat-card-actions>
+          <button class="btn btn-success" (click)="favorite($event, task)"><mat-icon class="grade">grade</mat-icon></button>
+        </mat-card-actions>
+      </mat-card>
     </div>
 
   </div>
