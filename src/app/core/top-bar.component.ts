@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.css']
+  styles: [``]
 })
 
 export class TopBarComponent implements OnInit {
