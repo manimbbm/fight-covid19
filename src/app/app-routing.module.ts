@@ -8,7 +8,6 @@ import {ProfileComponent} from './profile/profile.component';
 
 
 const routes: Routes = [
-  {path: 'home', component: AppComponent},
   {path: 'have-fun', component: FunComponent},
   {path: 'danger', component: DangerComponent},
   {path: 'settings', component: SettingsComponent},

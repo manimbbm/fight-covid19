@@ -1,14 +1,39 @@
+<!--        TODO fix bootstrap grid -->
+
 <div class="container">
-  <div class="row justify-content-md-center">
-    <div *ngFor="let task of tasks" class="col-md-3 m-2 p-0">
-      <mat-card>
-        <mat-card-title>{{task.name}}</mat-card-title>
-        <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</mat-card-content>
-        <mat-card-actions>
-          <button class="btn btn-success" (click)="addProfileTask($event, task)"><mat-icon class="add">add</mat-icon></button>
-        </mat-card-actions>
-      </mat-card>
+  <div class="row justify-content-md-center border-secondary">
+
+    <div class="col-3 border-left border-right">
+      <div class="container">
+        <div class="row">
+          <h3 class="my-4">Your Favorite Tasks</h3>
+          <ul class="list-group">
+            <li *ngFor="let profile_tasks of profile, let i = index"
+                class="list-group-item d-flex align-items-center justify-content-between">
+              {{tasks[profile_tasks].name}}
+              <button class="btn btn-danger align-content-end" (click)="removeTask($event, i)">
+                <mat-icon class="delete">delete</mat-icon>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
+    <div class="col-9 justify-content-md-center border-right">
+      <div *ngFor="let task of tasks" class="col-4">
+        <div class="m-2">
+          <mat-card>
+            <mat-card-title>{{task.name}}</mat-card-title>
+            <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</mat-card-content>
+            <mat-card-actions>
+              <button class="btn btn-success" (click)="addTask($event, task)">
+                <mat-icon class="add">add</mat-icon>
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,10 +1,8 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-fun',
-  templateUrl: './fun.component.html',
-  styleUrls: ['./fun.component.css']
+  templateUrl: './fun.component.html'
 })
 export class FunComponent {
   tasks: object[];
@@ -125,9 +123,15 @@ export class FunComponent {
     ];
   }
 
-  addProfileTask($event: MouseEvent, task) {
-    console.log({$event, task});
-    this.profile.push(task.id);
+  addTask($event: MouseEvent, task) {
+    if (!this.profile.includes(task.id)) {
+      this.profile.push(task.id);
+    }
   }
+
+  removeTask($event: MouseEvent, index) {
+    this.profile.splice(index, 1);
+  }
+
 
 }
